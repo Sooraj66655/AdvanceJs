@@ -4,13 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Advance Js Task 1</title>
+    <style>
+      .mainDiv {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20vh;
+      }
+      input {
+        width: 70%;
+        height: 6vh;
+        font-size: 30px;
+        font-weight: bold;
+      }
+      button {
+        padding: 6px 10px;
+        font-size: 30px;
+      }
+    </style>
   </head>
   <body>
-    <input type="text" id="user" placeholder="Enter a Number" /><br /><br />
-    <button onclick="CalC()" type="button">Submit</button>
+    <div class="mainDiv">
+      <input type="text" id="user" placeholder="Enter a Number" /><br /><br />
+      <button onclick="CalC()" type="button">Submit</button>
+    </div>
     <script>
-
-    //First Method
+      //First Method
       /****************************************By the User Input*****************************/
       let newArray = [];
       function CalC() {
@@ -25,11 +44,9 @@
         console.log(newArray);
       }
 
-
-      
-    //Second Method
+      //Second Method
       /*******************************By Fat Arrow function*****************************************/
-      numberArray = [1, 2, 3, 4, 5];
+      let numberArray = [1, 2, 3, 4, 5];
       let num = numberArray.map((initialNumber) => {
         if (initialNumber % 2 === 0) {
           return initialNumber * 2;
@@ -45,9 +62,7 @@
       document.write("Output :- [ " + Tnum + " ]<br>");
       console.log(Tnum);
 
-
-
-    //Third Method
+      //Third Method
       /**************************************By Ternery Operator With Arrow Function******************************/
       const num2 = numberArray.map(function (startNumber) {
         return startNumber * (startNumber % 2 === 0 ? 2 : 3);
