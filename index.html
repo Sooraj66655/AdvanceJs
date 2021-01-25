@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advance Js Task 1</title>
+  </head>
+  <body>
+    <input type="text" id="user" placeholder="Enter a Number" /><br /><br />
+    <button onclick="CalC()" type="button">Submit</button>
+    <script>
+
+    //First Method
+      /****************************************By the User Input*****************************/
+      let newArray = [];
+      function CalC() {
+        var userInput = document.getElementById("user").value;
+        if (userInput % 2 === 0) {
+          newArray.push(userInput * 2);
+        } else {
+          newArray.push(userInput * 3);
+        }
+        // document.write("By The User Input <br>");
+        // document.write("<h1>[ " + newArray + " ]</h1>");
+        console.log(newArray);
+      }
+
+
+      
+    //Second Method
+      /*******************************By Fat Arrow function*****************************************/
+      numberArray = [1, 2, 3, 4, 5];
+      let num = numberArray.map((initialNumber) => {
+        if (initialNumber % 2 === 0) {
+          return initialNumber * 2;
+        } else {
+          return initialNumber * 3;
+        }
+      });
+      let Tnum = [];
+      Tnum.push(num);
+      document.write("<br><br><hr><br><br><h1>It's Static Array Data</h1>");
+      document.write("Input:- [" + numberArray + "]<br><br>");
+      document.write("By Arrow Function With If Else <br>");
+      document.write("Output :- [ " + Tnum + " ]<br>");
+      console.log(Tnum);
+
+
+
+    //Third Method
+      /**************************************By Ternery Operator With Arrow Function******************************/
+      const num2 = numberArray.map(function (startNumber) {
+        return startNumber * (startNumber % 2 === 0 ? 2 : 3);
+      });
+      let Tnum2 = [];
+      Tnum2.push(num2);
+      document.write("By Arrow Function With Ternery Operator <br>");
+      document.write("Output :- [ " + Tnum2 + " ]");
+      console.log(Tnum2);
+    </script>
+  </body>
+</html>
